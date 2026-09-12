@@ -1,0 +1,317 @@
+{
+  "decisions": [
+    {
+      "id": "dec-1789152795070",
+      "firstName": "Grace",
+      "lastName": "Adegoke",
+      "email": "grace.adegoke@example.com",
+      "city": "London",
+      "country": "UK",
+      "reachOut": true,
+      "notes": "I cried while reading about the empty tomb. Today I gave my life to Christ.",
+      "status": "In Discipleship",
+      "createdAt": "2026-09-11T18:53:15.071Z",
+      "counselorNotes": "Called and shared John 1.",
+      "updatedAt": "2026-09-11T21:00:11.651Z"
+    },
+    {
+      "id": "dec-1001",
+      "firstName": "Marcus",
+      "lastName": "Chen",
+      "email": "marcus.chen@example.com",
+      "city": "Vancouver",
+      "country": "Canada",
+      "reachOut": true,
+      "notes": "I have spent years feeling empty despite career success. Today I prayed the prayer and accepted Jesus. I would love guidance on where to start.",
+      "status": "Contacted",
+      "createdAt": "2026-09-08T14:22:10Z"
+    },
+    {
+      "id": "dec-1002",
+      "firstName": "Elena",
+      "lastName": "Rostova",
+      "email": "elena.r@example.org",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "reachOut": true,
+      "notes": "Grew up in an atheist household. Reading about Jesus's grace broke my heart in the best way. I prayed right now in my room.",
+      "status": "New",
+      "createdAt": "2026-09-10T19:45:00Z"
+    },
+    {
+      "id": "dec-1003",
+      "firstName": "David",
+      "lastName": "Okonkwo",
+      "email": "david.o@example.com",
+      "city": "Lagos",
+      "country": "Nigeria",
+      "reachOut": false,
+      "notes": "Renewing my commitment after wandering away for 5 years. Thank you for this clean, sincere sanctuary of hope.",
+      "status": "In Discipleship",
+      "createdAt": "2026-09-11T08:15:30Z"
+    }
+  ],
+  "prayers": [
+    {
+      "id": "pry-101",
+      "name": "Sarah M.",
+      "request": "Praying for severe anxiety and panic attacks that have kept me from sleeping for three weeks. Asking God for supernatural peace and calm.",
+      "category": "Peace & Mental Health",
+      "isPublic": true,
+      "prayCount": 43,
+      "createdAt": "2026-09-10T11:20:00Z"
+    },
+    {
+      "id": "pry-102",
+      "name": "James & Linda",
+      "request": "Our teenage son has run away from faith and is struggling with substance addiction. Pray for his safety and that God turns his heart home.",
+      "category": "Family & Healing",
+      "isPublic": true,
+      "prayCount": 68,
+      "createdAt": "2026-09-09T18:05:00Z"
+    },
+    {
+      "id": "pry-103",
+      "name": "Emmanuel",
+      "request": "Facing unexpected job loss with three young kids. Praying for God's provision, wisdom for interviews, and trust in His timing.",
+      "category": "Provision & Guidance",
+      "isPublic": true,
+      "prayCount": 35,
+      "createdAt": "2026-09-11T09:40:00Z"
+    },
+    {
+      "id": "pry-104",
+      "name": "Anonymous",
+      "request": "Battling grief after losing my mother last month. The house is so quiet. Asking for the Holy Spirit's comfort.",
+      "category": "Comfort & Grief",
+      "isPublic": true,
+      "prayCount": 51,
+      "createdAt": "2026-09-11T12:10:00Z"
+    },
+    {
+      "id": "pry-105",
+      "name": "Chloe K.",
+      "request": "I gave my life to Christ yesterday! Pray that I have courage to tell my family and find a warm church community.",
+      "category": "New Believer Faith",
+      "isPublic": true,
+      "prayCount": 89,
+      "createdAt": "2026-09-11T15:00:00Z"
+    }
+  ],
+  "stories": [
+    {
+      "id": "sto-1789160411285",
+      "title": "Joy after 10 Years of Loneliness",
+      "author": "Maria S.",
+      "category": "Family & Grace",
+      "type": "written",
+      "excerpt": "I felt unseen until I read about how Jesus loves the individual. My heart was healed....",
+      "fullStory": "I felt unseen until I read about how Jesus loves the individual. My heart was healed.",
+      "videoUrl": "",
+      "readTime": "4 min read",
+      "date": "September 2026"
+    },
+    {
+      "id": "sto-1",
+      "title": "I Had Everything on Paper, Yet felt Completely Empty",
+      "author": "Marcus Chen",
+      "category": "Purpose & Skepticism",
+      "type": "written",
+      "excerpt": "A tech executive in Vancouver shares how chasing milestones left him spiritually starved until an unexpected conversation opened his eyes to Christ.",
+      "fullStory": "I spent a decade convinced that fulfillment was just one more promotion away. I had the loft, the title, the freedom to travel. But every night when the noise faded, an undeniable emptiness pressed into my chest. A coworker invited me to read the Gospel of John—not as religious dogma, but as historical biography. What struck me was Jesus's gentleness with weary, broken people. He didn't ask for a polished resume; He said, 'Come to me, all you who are weary.' Surrendering my pride and accepting His grace was like taking the first full breath of oxygen in my entire life.",
+      "videoUrl": "",
+      "readTime": "3 min read",
+      "date": "September 2026"
+    },
+    {
+      "id": "sto-2",
+      "title": "When Panic Turned to Peace",
+      "author": "Hannah Rodriguez",
+      "category": "Anxiety & Healing",
+      "type": "video",
+      "excerpt": "Hannah recounts 4 years of crippling panic disorder and how encountering God's tender presence transformed her fear into anchor-deep confidence.",
+      "fullStory": "Anxiety made my world smaller and smaller until I couldn't leave my front door without a knot in my throat. I used to think God was angry at me for being afraid. Then I found Philippians 4:6-7: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' A local prayer counselor prayed over me with such patience and kindness. Healing didn't happen in a magical blink—it happened day by day as I learned to cast every dread onto Jesus. Today I am free, joyful, and helping other young women find that same peace.",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "readTime": "4 min watch",
+      "date": "August 2026"
+    },
+    {
+      "id": "sto-3",
+      "title": "From Skeptic to Son: A Scientist's Journey",
+      "author": "Dr. Ronald Evans",
+      "category": "Purpose & Skepticism",
+      "type": "written",
+      "excerpt": "A biochemist explains why he thought faith was intellectual weakness until the historical evidence for the Resurrection changed everything.",
+      "fullStory": "As a researcher, I demanded empirical proof for everything. I viewed Christianity as emotional crutches for vulnerable people. But when a student challenged me to investigate the historical evidence for Jesus's life, death, and resurrection with the same rigor I applied to peer-reviewed literature, my prejudice fell apart. The historical bedrock of the empty tomb and the transformation of first-century eyewitnesses overwhelmed my doubts. Faith is not blind credulity; it is trusting a God who stepped into space, time, and history to rescue us.",
+      "videoUrl": "",
+      "readTime": "5 min read",
+      "date": "August 2026"
+    },
+    {
+      "id": "sto-4",
+      "title": "Broken Chains: A Story of Freedom from Addiction",
+      "author": "Trevor Jackson",
+      "category": "Freedom & Restoration",
+      "type": "video",
+      "excerpt": "Trevor spent 7 years in and out of clinics. In his darkest cell, Jesus met him with unconditional love and transformed his future.",
+      "fullStory": "I thought God had written me off. My family couldn't trust me, and I couldn't trust myself. One night in a county holding room, shivering through withdrawal, I cried out, 'If You are real, God, help me.' There were no thunderclaps, but a palpable warmth filled that freezing concrete corner. For the first time in years, the desire to escape left me. A Christian recovery ministry embraced me, taught me the Word, and walked with me through sobriety. Today I am four years clean, restored to my children, and telling everyone that no pit is deeper than God's love.",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "readTime": "6 min watch",
+      "date": "July 2026"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "cnt-1789160411267",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "subject": "Pastoral Care",
+      "message": "I have a question about reading the Gospel.",
+      "createdAt": "2026-09-11T21:00:11.267Z"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-1789160411117",
+      "email": "tester@example.com",
+      "createdAt": "2026-09-11T21:00:11.117Z"
+    }
+  ],
+  "outreachInvitations": [
+    {
+      "id": "inv-1789161012466",
+      "organization": "Grace Community Fellowship",
+      "contactName": "Pastor Marcus Cole",
+      "email": "marcus@gracechapel.org",
+      "phone": "+1 555-0199",
+      "city": "Denver",
+      "country": "United States",
+      "eventType": "Community Crusade",
+      "expectedAudience": "Not specified",
+      "desiredDate": "Flexible",
+      "notes": "Hungry for city-wide revival and street soul winning.",
+      "status": "New",
+      "createdAt": "2026-09-11T21:10:12.466Z"
+    },
+    {
+      "id": "inv-201",
+      "organization": "Cornerstone University Campus Fellowship",
+      "contactName": "Pastor Joshua Miller",
+      "email": "joshua.m@campuscornerstone.edu",
+      "phone": "+1 (555) 234-8901",
+      "city": "Austin, Texas",
+      "country": "USA",
+      "eventType": "Campus Revival & Student Evangelism",
+      "expectedAudience": "300 - 500 students",
+      "desiredDate": "November 2026",
+      "notes": "We have 15,000 unchurched students around our campus. We would love your team to conduct open-air outreach and train our student leaders.",
+      "status": "Reviewing",
+      "createdAt": "2026-09-10T14:30:00Z"
+    }
+  ],
+  "trainingApplications": [
+    {
+      "id": "trn-1789161012482",
+      "fullName": "Sarah Jenkins",
+      "email": "sarah.j@example.com",
+      "phone": "+1 555-0188",
+      "city": "Chicago",
+      "country": "United States",
+      "calling": "Called to campus evangelism and street ministry.",
+      "cohort": "Spring Cohort (Starts March 2026)",
+      "status": "Under Review",
+      "createdAt": "2026-09-11T21:10:12.482Z"
+    },
+    {
+      "id": "trn-1789160967000",
+      "fullName": "Sarah Jenkins",
+      "email": "sarah.j@example.com",
+      "phone": "+1 555-0188",
+      "city": "Chicago",
+      "country": "United States",
+      "calling": "Called to campus evangelism and street ministry.",
+      "cohort": "Spring Cohort (Starts March 2026)",
+      "status": "Under Review",
+      "createdAt": "2026-09-11T21:09:27.000Z"
+    },
+    {
+      "id": "trn-301",
+      "fullName": "Kofi Mensah",
+      "email": "kofi.mensah@example.com",
+      "phone": "+233 24 555 1234",
+      "city": "Accra",
+      "country": "Ghana",
+      "calling": "I have felt a heavy burden for unreached rural communities in West Africa. I need practical theological grounding and street evangelism training.",
+      "cohort": "Winter 2026 Cohort (Online + Field)",
+      "status": "Accepted",
+      "createdAt": "2026-09-09T10:15:00Z"
+    }
+  ],
+  "memberships": [
+    {
+      "id": "mem-1789161012494",
+      "fullName": "David K. Osei",
+      "email": "david.osei@example.com",
+      "city": "London",
+      "country": "United Kingdom",
+      "involvement": "Intercessory Prayer Team",
+      "testimony": "Saved 3 years ago at an outreach crusade, now desiring to serve.",
+      "status": "Active Member",
+      "createdAt": "2026-09-11T21:10:12.494Z"
+    },
+    {
+      "id": "mem-1789160967015",
+      "fullName": "David K. Osei",
+      "email": "david.osei@example.com",
+      "city": "London",
+      "country": "United Kingdom",
+      "involvement": "Intercessory Prayer Team",
+      "testimony": "Saved 3 years ago at an outreach crusade, now desiring to serve.",
+      "status": "Active Member",
+      "createdAt": "2026-09-11T21:09:27.015Z"
+    },
+    {
+      "id": "mem-401",
+      "fullName": "Hannah Becker",
+      "email": "hannah.becker@example.de",
+      "city": "Munich",
+      "country": "Germany",
+      "involvement": "Intercessory Prayer Circle & Local Church Connect",
+      "testimony": "Accepted Christ 6 months ago. I want a spiritual family to grow with and intercede for the lost.",
+      "status": "Active Member",
+      "createdAt": "2026-09-11T12:00:00Z"
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "prt-1789161012509",
+      "partnerName": "Jonathan & Rachel Vance",
+      "email": "vancefamily@example.com",
+      "tier": "Harvest Partner",
+      "amount": "75",
+      "frequency": "Monthly Recurring",
+      "notes": "Praying for open hearts in every city you visit.",
+      "createdAt": "2026-09-11T21:10:12.509Z"
+    },
+    {
+      "id": "prt-1789160967034",
+      "partnerName": "Jonathan & Rachel Vance",
+      "email": "vancefamily@example.com",
+      "tier": "Harvest Partner",
+      "amount": "75",
+      "frequency": "Monthly Recurring",
+      "notes": "Praying for open hearts in every city you visit.",
+      "createdAt": "2026-09-11T21:09:27.034Z"
+    },
+    {
+      "id": "prt-501",
+      "partnerName": "Stephen & Grace Cole",
+      "email": "coles@example.org",
+      "tier": "Harvest Partner",
+      "amount": "$75 / month",
+      "frequency": "Monthly Recurring",
+      "notes": "Praying for every crusade this year!",
+      "createdAt": "2026-09-08T09:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "evangelism-outreach",
+  "version": "1.0.0",
+  "description": "Warm minimalist web platform for outreach evangelism, discipleship, and prayer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "keywords": ["evangelism", "gospel", "discipleship", "prayer", "ministry"],
+  "author": "Outreach Team",
+  "license": "ISC"
+}

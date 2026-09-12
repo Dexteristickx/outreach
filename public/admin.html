@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministry Follow-Up & Admin Console | Anchor of Hope</title>
+  <meta name="description" content="Administrative console for tracking salvation decisions, moderating prayer requests, and managing discipleship email sequences.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .admin-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .kpi-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .kpi-number {
+      font-size: 2.25rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      color: var(--color-accent);
+      margin: 0.25rem 0;
+    }
+    .status-pill {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .status-urgent { background: #FDE8E8; color: #9B1C1C; }
+    .status-neutral { background: var(--color-accent-light); color: var(--color-accent); }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+    table.admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    table.admin-table th {
+      background: var(--color-surface-warm);
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-secondary);
+    }
+    table.admin-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          <circle cx="12" cy="7" r="1.5" fill="currentColor"></circle>
+        </svg>
+        <span>Anchor of Hope • Admin</span>
+      </a>
+
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <span style="font-size:0.85rem; color:var(--color-text-muted);">Ministry Care Portal</span>
+        <a href="index.html" class="btn btn-sm btn-outline">Back to Website</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section" style="padding-top:2.5rem;">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:2rem;">
+        <div>
+          <h2>Outreach Follow-Up & Discipleship Dashboard</h2>
+          <p style="color:var(--color-text-secondary); margin:0;">Real-time management of salvation commitments, prayer intercession, and email workflows.</p>
+        </div>
+        <button class="btn btn-sm btn-primary" onclick="location.reload()">Refresh Data</button>
+      </div>
+
+      <!-- KPI METRICS -->
+      <div class="admin-kpi-grid">
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Decisions for Christ</span>
+          <div id="kpi-decisions" class="kpi-number">0</div>
+          <span style="font-size:0.8rem; color:var(--color-accent);">Total recorded</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Needs Follow-Up</span>
+          <div id="kpi-followup" class="kpi-number" style="color:var(--color-gold);">0</div>
+          <span style="font-size:0.8rem; color:var(--color-gold);">Requested contact</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Community Prayers</span>
+          <div id="kpi-prayers" class="kpi-number">0</div>
+          <span style="font-size:0.8rem; color:var(--color-text-secondary);">Requests submitted</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Outreach Invites</span>
+          <div id="kpi-outreach" class="kpi-number" style="color:var(--color-accent);">0</div>
+          <span style="font-size:0.8rem; color:var(--color-text-secondary);">Cities & campuses</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Missionary Trainees</span>
+          <div id="kpi-trainees" class="kpi-number" style="color:var(--color-accent);">0</div>
+          <span style="font-size:0.8rem; color:var(--color-text-secondary);">School of Evangelism</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Ministry Members</span>
+          <div id="kpi-members" class="kpi-number" style="color:var(--color-gold);">0</div>
+          <span style="font-size:0.8rem; color:var(--color-text-secondary);">Covenant family</span>
+        </div>
+
+        <div class="kpi-box">
+          <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--color-text-muted);">Kingdom Partners</span>
+          <div id="kpi-partners" class="kpi-number" style="color:var(--color-gold);">0</div>
+          <span style="font-size:0.8rem; color:var(--color-text-secondary);">Monthly & one-time</span>
+        </div>
+      </div>
+
+      <!-- 1. SALVATION DECISIONS MANAGEMENT -->
+      <section style="margin-bottom:3.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <h3 style="margin:0;">Salvation Decisions & Discipleship Log</h3>
+          <span style="font-size:0.85rem; color:var(--color-text-muted);">Update status to manage pastoral outreach</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Seeker Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Contact Flag</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="admin-decisions-tbody">
+              <tr><td colspan="7" style="text-align:center; padding:1.5rem;">Loading decisions...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. AUTOMATED 7-DAY WELCOME EMAIL NURTURE SEQUENCE -->
+      <section style="margin-bottom:3.5rem;">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <span class="section-tag section-tag-gold">Phase 5.3 Automated Drip</span>
+          <h3 style="margin:0.25rem 0;">7-Day Salvation Welcome Email Series</h3>
+          <p style="font-size:0.9rem; color:var(--color-text-secondary);">
+            Every seeker who submits the salvation decision form receives this 7-day discipleship series automatically. You can inspect the email content and simulate a test send.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:2fr 1fr; gap:2rem;">
+          <!-- List of drip emails -->
+          <div id="admin-drip-container">
+            <!-- Rendered dynamically via admin.js -->
+            <p>Loading email templates...</p>
+          </div>
+
+          <!-- Test Send Simulator Box -->
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem; height:fit-content;">
+            <h4 style="color:var(--color-accent); margin-bottom:0.5rem;">Simulate Drip Dispatch</h4>
+            <p style="font-size:0.85rem; color:var(--color-text-secondary); margin-bottom:1.25rem;">
+              Test how an email renders and verify the transactional drip delivery.
+            </p>
+            <form id="test-drip-form">
+              <div class="form-group">
+                <label for="test-email" class="form-label">Recipient Email</label>
+                <input type="email" id="test-email" required class="form-input" value="seeker@example.com">
+              </div>
+              <div class="form-group">
+                <label for="test-day" class="form-label">Select Sequence Day</label>
+                <select id="test-day" class="form-select">
+                  <option value="1">Day 1: Welcome to the Family</option>
+                  <option value="2">Day 2: Talking with God (Prayer)</option>
+                  <option value="3">Day 3: Opening the Word</option>
+                  <option value="4">Day 4: Overcoming Doubt</option>
+                  <option value="5">Day 5: Finding Your Church Family</option>
+                  <option value="6">Day 6: Sharing Your Story</option>
+                  <option value="7">Day 7: Walking in Grace</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" style="width:100%;">
+                Simulate Dispatch Now →
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PRAYER REQUESTS LOG -->
+      <section>
+        <h3 style="margin-bottom:1rem;">Recent Prayer Requests Inbox</h3>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Requester</th>
+                <th>Category</th>
+                <th>Prayer Need</th>
+                <th>Intercessions</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="admin-prayers-tbody">
+              <tr><td colspan="5" style="text-align:center; padding:1.5rem;">Loading prayers...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. OUTREACH INVITATIONS -->
+      <section style="margin-top:3.5rem;">
+        <h3 style="margin-bottom:1rem;">City & Campus Outreach Invitations</h3>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Organization / Church</th>
+                <th>Contact Person</th>
+                <th>Email / Phone</th>
+                <th>Location</th>
+                <th>Event Type</th>
+                <th>Audience</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-outreach-tbody">
+              <tr><td colspan="7" style="text-align:center; padding:1.5rem;">Loading invitations...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. MISSIONARY TRAINING APPLICATIONS -->
+      <section style="margin-top:3.5rem;">
+        <h3 style="margin-bottom:1rem;">School of Evangelism Applicants</h3>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Applicant Name</th>
+                <th>Email / Phone</th>
+                <th>Location</th>
+                <th>Cohort</th>
+                <th>Calling / Burden</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-training-tbody">
+              <tr><td colspan="6" style="text-align:center; padding:1.5rem;">Loading applicants...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 6. MINISTRY MEMBERSHIP ROSTER -->
+      <section style="margin-top:3.5rem;">
+        <h3 style="margin-bottom:1rem;">Ministry Membership Roster</h3>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Member Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Area of Involvement</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-members-tbody">
+              <tr><td colspan="5" style="text-align:center; padding:1.5rem;">Loading members...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 7. KINGDOM PARTNERSHIP PLEDGES -->
+      <section style="margin-top:3.5rem; margin-bottom:3.5rem;">
+        <h3 style="margin-bottom:1rem;">Kingdom Partnership & Giving Pledges</h3>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Partner Name</th>
+                <th>Email</th>
+                <th>Tier</th>
+                <th>Pledge Amount</th>
+                <th>Frequency</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="admin-partners-tbody">
+              <tr><td colspan="6" style="text-align:center; padding:1.5rem;">Loading partners...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- EMAIL PREVIEW MODAL -->
+  <div id="email-preview-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Email preview">
+    <div class="modal-box" style="max-width:680px;">
+      <button class="modal-close-btn" onclick="document.getElementById('email-preview-modal').classList.remove('active')">×</button>
+      <span class="section-tag section-tag-gold" style="margin-bottom:0.5rem;">Automated Email Template</span>
+      <h3 id="email-modal-subject" style="margin:0 0 1rem 0; font-size:1.35rem;">Subject</h3>
+      <div id="email-modal-body" style="background:var(--color-surface-warm); border:1px solid var(--color-border); border-radius:8px; padding:1.5rem; font-size:0.95rem; line-height:1.7; color:var(--color-text-secondary); max-height:400px; overflow-y:auto; font-family:var(--font-sans);">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
