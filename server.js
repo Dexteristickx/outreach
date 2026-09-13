@@ -21,30 +21,54 @@ const gospelPath = path.join(__dirname, 'data', 'gospel_content.json');
 const resourcesPath = path.join(__dirname, 'data', 'resources.json');
 const emailsPath = path.join(__dirname, 'data', 'email_templates.json');
 
+// Serverless / Vercel persistence fallback
+let inMemoryDb = null;
+const isVercel = Boolean(process.env.VERCEL);
+const tmpDbPath = path.join('/tmp', 'database.json');
+
 // Helper to read JSON
 function readJson(filePath) {
   try {
-    const raw = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(raw);
+    const target = (isVercel && filePath === dbPath && fs.existsSync(tmpDbPath)) ? tmpDbPath : filePath;
+    if (fs.existsSync(target)) {
+      const raw = fs.readFileSync(target, 'utf8');
+      const parsed = JSON.parse(raw);
+      if (filePath === dbPath) inMemoryDb = parsed;
+      return parsed;
+    }
   } catch (err) {
     console.error(`Error reading ${filePath}:`, err.message);
-    return null;
   }
+  if (filePath === dbPath && inMemoryDb) {
+    return inMemoryDb;
+  }
+  return null;
 }
 
 // Helper to write JSON
 function writeJson(filePath, data) {
+  if (filePath === dbPath || filePath === tmpDbPath) {
+    inMemoryDb = data;
+  }
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
     return true;
   } catch (err) {
-    console.error(`Error writing ${filePath}:`, err.message);
-    return false;
+    console.warn(`Direct write to ${filePath} failed (serverless read-only filesystem):`, err.message);
+    if (filePath === dbPath) {
+      try {
+        fs.writeFileSync(tmpDbPath, JSON.stringify(data, null, 2), 'utf8');
+        return true;
+      } catch (tmpErr) {
+        console.error('Error writing to /tmp:', tmpErr.message);
+      }
+    }
+    return true; // cached in inMemoryDb
   }
 }
 
 // Ensure database exists
-if (!fs.existsSync(dbPath)) {
+if (!fs.existsSync(dbPath) && !isVercel) {
   const initialData = { decisions: [], prayers: [], stories: [], contacts: [], subscribers: [] };
   writeJson(dbPath, initialData);
 }
@@ -565,11 +589,16 @@ app.get('*', (req, res) => {
   res.status(404).sendFile(path.join(publicDir, '404.html'));
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(` Evangelism Outreach Platform running on port ${PORT}`);
-  console.log(` URL: http://localhost:${PORT}`);
-  console.log(` Mode: Warm Minimalism (Faith, Hope, Love)`);
-  console.log(`====================================================`);
-});
+// Export app for serverless platforms (e.g. Vercel)
+module.exports = app;
+
+// Start Server if run directly
+if (require.main === module && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(` Evangelism Outreach Platform running on port ${PORT}`);
+    console.log(` URL: http://localhost:${PORT}`);
+    console.log(` Mode: Warm Minimalism (Faith, Hope, Love)`);
+    console.log(`====================================================`);
+  });
+}
