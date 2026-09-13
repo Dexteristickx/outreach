@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = prayerForm.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerText = 'Submitting Request...';
+        submitBtn.innerText = 'Submitting Request';
       }
 
       const payload = {

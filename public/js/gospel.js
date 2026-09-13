@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = decisionForm.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerText = 'Recording Your Decision...';
+        submitBtn.innerText = 'Recording Your Decision';
       }
 
       const formData = {

@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               <tr>
                 <td><strong>${escapeHtml(d.firstName)} ${escapeHtml(d.lastName)}</strong></td>
                 <td><a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a></td>
-                <td>${escapeHtml(d.city || '—')}, ${escapeHtml(d.country || '—')}</td>
+                <td>${escapeHtml(d.city || '-')}, ${escapeHtml(d.country || '-')}</td>
                 <td>
                   ${d.reachOut 
                     ? '<span class="status-pill status-urgent">Needs Contact</span>' 

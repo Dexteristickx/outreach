@@ -105,7 +105,7 @@
       "author": "Maria S.",
       "category": "Family & Grace",
       "type": "written",
-      "excerpt": "I felt unseen until I read about how Jesus loves the individual. My heart was healed....",
+      "excerpt": "I felt unseen until I read about how Jesus loves the individual. My heart was healed.",
       "fullStory": "I felt unseen until I read about how Jesus loves the individual. My heart was healed.",
       "videoUrl": "",
       "readTime": "4 min read",
@@ -118,7 +118,7 @@
       "category": "Purpose & Skepticism",
       "type": "written",
       "excerpt": "A tech executive in Vancouver shares how chasing milestones left him spiritually starved until an unexpected conversation opened his eyes to Christ.",
-      "fullStory": "I spent a decade convinced that fulfillment was just one more promotion away. I had the loft, the title, the freedom to travel. But every night when the noise faded, an undeniable emptiness pressed into my chest. A coworker invited me to read the Gospel of John—not as religious dogma, but as historical biography. What struck me was Jesus's gentleness with weary, broken people. He didn't ask for a polished resume; He said, 'Come to me, all you who are weary.' Surrendering my pride and accepting His grace was like taking the first full breath of oxygen in my entire life.",
+      "fullStory": "I spent a decade convinced that fulfillment was just one more promotion away. I had the loft, the title, the freedom to travel. But every night when the noise faded, an undeniable emptiness pressed into my chest. A coworker invited me to read the Gospel of John, not as religious dogma, but as historical biography. What struck me was Jesus's gentleness with weary, broken people. He didn't ask for a polished resume; He said, 'Come to me, all you who are weary.' Surrendering my pride and accepting His grace was like taking the first full breath of oxygen in my entire life.",
       "videoUrl": "",
       "readTime": "3 min read",
       "date": "September 2026"
@@ -130,7 +130,7 @@
       "category": "Anxiety & Healing",
       "type": "video",
       "excerpt": "Hannah recounts 4 years of crippling panic disorder and how encountering God's tender presence transformed her fear into anchor-deep confidence.",
-      "fullStory": "Anxiety made my world smaller and smaller until I couldn't leave my front door without a knot in my throat. I used to think God was angry at me for being afraid. Then I found Philippians 4:6-7: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' A local prayer counselor prayed over me with such patience and kindness. Healing didn't happen in a magical blink—it happened day by day as I learned to cast every dread onto Jesus. Today I am free, joyful, and helping other young women find that same peace.",
+      "fullStory": "Anxiety made my world smaller and smaller until I couldn't leave my front door without a knot in my throat. I used to think God was angry at me for being afraid. Then I found Philippians 4:6-7: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' A local prayer counselor prayed over me with such patience and kindness. Healing unfolded day by day as I learned to entrust every fear into God’s hands. Today I am free, joyful, and helping other young women find that same peace.",
       "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "readTime": "4 min watch",
       "date": "August 2026"
@@ -179,6 +179,21 @@
   ],
   "outreachInvitations": [
     {
+      "id": "inv-1789313631644",
+      "organization": "Grace Community Fellowship",
+      "contactName": "Pastor Marcus Cole",
+      "email": "marcus@gracechapel.org",
+      "phone": "+1 555-0199",
+      "city": "Denver",
+      "country": "United States",
+      "eventType": "Community Crusade",
+      "expectedAudience": "Not specified",
+      "desiredDate": "Flexible",
+      "notes": "Hungry for city-wide revival and street soul winning.",
+      "status": "New",
+      "createdAt": "2026-09-13T15:33:51.644Z"
+    },
+    {
       "id": "inv-1789161012466",
       "organization": "Grace Community Fellowship",
       "contactName": "Pastor Marcus Cole",
@@ -210,6 +225,18 @@
     }
   ],
   "trainingApplications": [
+    {
+      "id": "trn-1789313631662",
+      "fullName": "Sarah Jenkins",
+      "email": "sarah.j@example.com",
+      "phone": "+1 555-0188",
+      "city": "Chicago",
+      "country": "United States",
+      "calling": "Called to campus evangelism and street ministry.",
+      "cohort": "Spring Cohort (Starts March 2026)",
+      "status": "Under Review",
+      "createdAt": "2026-09-13T15:33:51.662Z"
+    },
     {
       "id": "trn-1789161012482",
       "fullName": "Sarah Jenkins",
@@ -249,6 +276,17 @@
   ],
   "memberships": [
     {
+      "id": "mem-1789313631677",
+      "fullName": "David K. Osei",
+      "email": "david.osei@example.com",
+      "city": "London",
+      "country": "United Kingdom",
+      "involvement": "Intercessory Prayer Team",
+      "testimony": "Saved 3 years ago at an outreach crusade, now desiring to serve.",
+      "status": "Active Member",
+      "createdAt": "2026-09-13T15:33:51.677Z"
+    },
+    {
       "id": "mem-1789161012494",
       "fullName": "David K. Osei",
       "email": "david.osei@example.com",
@@ -283,6 +321,16 @@
     }
   ],
   "partnerships": [
+    {
+      "id": "prt-1789313631690",
+      "partnerName": "Jonathan & Rachel Vance",
+      "email": "vancefamily@example.com",
+      "tier": "Harvest Partner",
+      "amount": "75",
+      "frequency": "Monthly Recurring",
+      "notes": "Praying for open hearts in every city you visit.",
+      "createdAt": "2026-09-13T15:33:51.690Z"
+    },
     {
       "id": "prt-1789161012509",
       "partnerName": "Jonathan & Rachel Vance",

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.focus();
         searchInput.value = '';
       }
-      if (searchResults) searchResults.innerHTML = '<p class="text-muted" style="text-align:center; padding:1.5rem;">Type to search Gospel topics, doubts, articles, or testimonies...</p>';
+      if (searchResults) searchResults.innerHTML = '<p class="text-muted" style="text-align:center; padding:1.5rem;">Search Gospel topics, scripture guides, or testimonies</p>';
     }
   }
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(searchTimeout);
       const query = searchInput.value.trim();
       if (query.length < 2) {
-        searchResults.innerHTML = '<p class="text-muted" style="text-align:center; padding:1.5rem;">Type at least 2 characters to search...</p>';
+        searchResults.innerHTML = '<p class="text-muted" style="text-align:center; padding:1.5rem;">Type at least 2 characters to search</p>';
         return;
       }
 

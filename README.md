@@ -1,4 +1,4 @@
-# Anchor of Hope — Evangelism Outreach Platform
+# Anchor of Hope | Evangelism Outreach Platform
 
 An outreach evangelism web platform engineered according to the **Warm Minimalism** design philosophy. Designed to remove religious barriers, lead seekers through a gentle and unhurried salvation journey, nurture new believers with practical discipleship tools, provide community prayer intercession, equip missionaries, host citywide crusades, and support ministry follow-up teams.
 
