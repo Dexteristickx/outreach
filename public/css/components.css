@@ -946,6 +946,109 @@
   color: #FFFFFF;
 }
 
+/* Horizontal Footer Layout */
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand-info p {
+  color: #A0A0A0;
+  font-size: 0.92rem;
+  margin: 0;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.footer-horizontal-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section-row {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-section-row:last-of-type {
+  border-bottom: none;
+}
+
+.footer-section-heading {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+
+.footer-horizontal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-horizontal-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.footer-horizontal-list li:not(:last-child)::after {
+  content: "•";
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.75rem;
+}
+
+.footer-horizontal-list a {
+  color: #D1D1D1;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-horizontal-list a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-horizontal-list .footer-accent-pill {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.footer-horizontal-list .footer-accent-pill:hover {
+  color: #FFE699;
+}
+
+@media (max-width: 640px) {
+  .footer-horizontal-list li:not(:last-child)::after {
+    display: none;
+  }
+  .footer-horizontal-list {
+    gap: 0.85rem 1.25rem;
+  }
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 2rem;

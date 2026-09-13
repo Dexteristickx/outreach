@@ -322,53 +322,59 @@
     </section>
   </main>
 
-    <!-- SITE FOOTER -->
-    <!-- SITE FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
+      <!-- TOP BRAND & NEWSLETTER ROW (HORIZONTAL) -->
+      <div class="footer-top-row">
+        <div class="footer-brand-info">
+          <div style="display:flex; align-items:center; gap:0.65rem; margin-bottom:0.5rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold);">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              <circle cx="12" cy="7" r="1.5" fill="currentColor"></circle>
+            </svg>
+            <span style="font-family:var(--font-serif); font-size:1.3rem; font-weight:700; color:#FFF;">Anchor of Hope</span>
+          </div>
+          <p>
+            An outreach evangelism ministry sharing the Gospel of Jesus Christ with seekers, caring for new believers, and serving communities across the nations.
+          </p>
+        </div>
+        <div class="footer-newsletter-box">
+          <span style="display:block; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:var(--color-gold); margin-bottom:0.5rem;">Weekly Scripture Devotional</span>
+          <form class="newsletter-form" style="display:flex; gap:0.5rem;">
+            <input type="email" placeholder="Your email address" required class="form-input" style="padding:0.55rem 0.85rem; font-size:0.85rem; background:#222; border-color:#333; color:#FFF; width:220px;">
+            <button type="submit" class="btn btn-sm btn-primary">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- CRISIS BANNER -->
       <div class="crisis-banner">
         <div>
           <strong>Immediate Help & Crisis Support:</strong>
           <span>If you or someone you know is in distress or having thoughts of self-harm, please call or text <strong>988</strong> (USA & Canada) or contact your local emergency services immediately. Every human life is precious in the sight of God.</span>
         </div>
-        <a href="https://findahelpline.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="color:#FFF; border-color:#FFF;">Find Local Helpline</a>
+        <a href="https://findahelpline.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="color:#FFF; border-color:#FFF; white-space:nowrap;">Find Local Helpline</a>
       </div>
 
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-gold);">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              <circle cx="12" cy="7" r="1.5" fill="currentColor"></circle>
-            </svg>
-            <span style="font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:#FFF;">Anchor of Hope</span>
-          </div>
-          <p>
-            An outreach evangelism ministry sharing the Gospel of Jesus Christ with seekers, caring for new believers, and serving communities across the nations.
-          </p>
-          <div style="margin-top:1.25rem;">
-            <span style="display:block; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:var(--color-gold); margin-bottom:0.4rem;">Weekly Scripture Devotional</span>
-            <form class="newsletter-form" style="display:flex; gap:0.5rem; max-width:320px;">
-              <input type="email" placeholder="Your email address" required class="form-input" style="padding:0.5rem 0.8rem; font-size:0.85rem; background:#222; border-color:#333; color:#FFF;">
-              <button type="submit" class="btn btn-sm btn-primary">Join</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h5>The Gospel</h5>
-          <ul class="footer-links">
+      <!-- HORIZONTAL NAVIGATION SECTIONS (MAIN TITLES WITH HORIZONTAL SUB MENUS UNDER) -->
+      <div class="footer-horizontal-nav">
+        <!-- 1. The Gospel -->
+        <div class="footer-section-row">
+          <div class="footer-section-heading">The Gospel</div>
+          <ul class="footer-horizontal-list">
             <li><a href="gospel.html#who-is-jesus">Who Is Jesus?</a></li>
             <li><a href="gospel.html#why-it-matters">Why It Matters</a></li>
             <li><a href="gospel.html#plan-of-salvation">Plan of Salvation</a></li>
             <li><a href="gospel.html#doubts">Common Questions</a></li>
-            <li><a href="decision.html">Accept Jesus Today</a></li>
+            <li><a href="decision.html" class="footer-accent-pill">Accept Jesus Today &rarr;</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h5>Discipleship</h5>
-          <ul class="footer-links">
+        <!-- 2. Discipleship -->
+        <div class="footer-section-row">
+          <div class="footer-section-heading">Discipleship</div>
+          <ul class="footer-horizontal-list">
             <li><a href="new-believers.html">New Believers Hub</a></li>
             <li><a href="new-believers.html#how-to-pray">How to Pray (ACTS)</a></li>
             <li><a href="new-believers.html#bible-plan">30-Day Bible Plan</a></li>
@@ -377,9 +383,10 @@
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h5>Missions & Training</h5>
-          <ul class="footer-links">
+        <!-- 3. Missions & Training -->
+        <div class="footer-section-row">
+          <div class="footer-section-heading">Missions & Training</div>
+          <ul class="footer-horizontal-list">
             <li><a href="outreach.html">Upcoming Outreaches</a></li>
             <li><a href="outreach.html#invite-outreach">Invite Our Team</a></li>
             <li><a href="training.html">School of Evangelism</a></li>
@@ -388,21 +395,23 @@
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h5>Partner & Connect</h5>
-          <ul class="footer-links">
+        <!-- 4. Partner & Connect -->
+        <div class="footer-section-row">
+          <div class="footer-section-heading">Partner & Connect</div>
+          <ul class="footer-horizontal-list">
             <li><a href="partner.html">Kingdom Partnership</a></li>
             <li><a href="get-involved.html">Volunteer & Resources</a></li>
             <li><a href="about.html#faith">Statement of Faith</a></li>
             <li><a href="about.html">Our Mission</a></li>
             <li><a href="contact.html">Contact Pastoral Care</a></li>
-            <li><a href="admin.html" style="opacity:0.6; font-size:0.75rem;">Ministry Care Portal</a></li>
+            <li><a href="admin.html" style="opacity:0.6; font-size:0.85rem;">Ministry Care Portal</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- FOOTER BOTTOM -->
       <div class="footer-bottom">
-        <div>© 2026 Anchor of Hope Evangelism Outreach. Dedicated to the glory of God.</div>
+        <div>&copy; 2026 Anchor of Hope Evangelism Outreach. Dedicated to the glory of God.</div>
         <div style="display:flex; gap:1.5rem;">
           <a href="about.html#privacy" style="color:#7A7A7A;">Privacy Policy</a>
           <a href="about.html#terms" style="color:#7A7A7A;">Terms of Care</a>
